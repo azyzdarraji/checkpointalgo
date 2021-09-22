@@ -1,0 +1,24 @@
+ALGORITHM  checkpointalgo 
+VAR
+nbrword , nbrvoyel ,nbrchar , i : INTEGER ;
+phrase :STRING ; 
+BEGIN
+    read (phrase); 
+    nbrvoyel := 0 ;
+    nbrword :=1 ;
+    nbrchar :=0 ;
+    i := 0 ;
+     
+    WHILE ( phrase[i] <> "." ) DO
+        i:= i+1 ; 
+          IF ( phrase[i]==" ") THEN
+             nbrword ++ ; 
+          ELSE IF (phrase[i] in ["a", "e" ,"i" ,"y " , "u" , "o" , "A", "E", "I", "Y", "O"] )
+
+              nbrvoyel ++ ; 
+          END IF 
+    END_WHILE
+          write ("le nbre de voyelles est" , nbrvoyel ) ;
+          write("le nbre des mots est" , nbrword ) ;
+          write (" le nbre de carachteres est ", i) ;
+END
